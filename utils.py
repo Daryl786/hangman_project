@@ -6,7 +6,7 @@ def get_random_word():
     with open("wordlist.txt") as f:
         for palabra in f:
             limpia = palabra.strip()
-            if limpia.isalpha():
+            if limpia.replace("-", "").isalpha():
                 palabras.append(limpia)
             else:
                 print("las palabras no son alfabeticas")
